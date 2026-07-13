@@ -52,38 +52,74 @@ datos van embebidos en el archivo).
 ## API
 
 **Host:** `https://resultadospreccongreso2026.registraduria.gov.co`
-El portal es una SPA: la interfaz consulta primero un **nomenclator** (división
-político-electoral, DIVIPOL) y luego un JSON de resultados por división
-geográfica. El mapeo se hizo con **F12 → pestaña Network**.
 
-**Patrón de URL** (por corporación y municipio; ajustable en
-`scraper/scraper.py → URL_TEMPLATES` y `CORP_CODE`):
+El portal es una **SPA** (single-page app): no entrega HTML con resultados, sino
+que carga un `index` en blanco y pide los datos por detrás en JSON. Todo el
+mapeo de esta sección se levantó inspeccionando esas peticiones con
+**F12 → pestaña Network → filtro Fetch/XHR** sobre el portal en vivo.
+
+### Patrón de URL (real, verificado)
+
+La SPA usa dos tipos de recurso, ambos servidos como archivos JSON estáticos
+bajo `/json/` y `/resultados/`:
 
 ```
-{host}/api/v1/resultados/{corporacion}/municipio/{codmun}
-{host}/data/{corporacion}/{codmun}.json         # variantes probadas
+# 1) Nomenclator (una sola vez, al abrir el portal): catálogo de partidos,
+#    niveles geográficos y elecciones.
+{host}/json/nomenclator.json
+
+# 2) Resultados por ámbito geográfico (se pide al navegar a un municipio):
+{host}/resultados/{elec}/{ambito}/{cam}?s=resultados-info-general
+#    y el JSON de datos asociado:
+{host}/json/{ambito}.json          # ej. Tunja -> /json/0700001.json
 ```
 
-**Cómo obtener el nomenclator:** los códigos DIVIPOL de Boyacá (departamento
-`15`) para los municipios objetivo son `TUNJA=15001`, `PAIPA=15516`,
-`SOGAMOSO=15759`, `DUITAMA=15238` (mapa `MUNICIPIOS` en `scraper.py`). El
-listado completo se obtiene del endpoint de nomenclator que carga la SPA al
-inicio (visible en Network al abrir el portal).
+- `{elec}` = tipo de elección (`1` = Cámara, `2` = Senado en la ruta de la SPA).
+- `{ambito}` = **código interno** del ámbito geográfico (NO el DIVIPOL). Tunja =
+  `0700001`. Se resuelve desde el nomenclator (Boyacá tiene `dept="07"`).
 
-**Campos JSON utilizados (8+):** `codmun`, `municipio`, `puestos[]`,
-`codpue`, `zona`, `mesas[]`, `nummesa`, `partidos[]`, `codpar`,
-`votos_partido`, `candidatos[]`, `codcan`, `votos`.
+### Cómo obtener el nomenclator
+
+`GET {host}/json/nomenclator.json`. Devuelve, entre otros:
+`levels[]` (`COLOMBIA → DEPARTAMENTO → MUNICIPIO → ZONA → PUESTO`),
+`elec[]` (elecciones; Senado trae `i:0, sigla:"SE"`),
+`partidos[]` (catálogo con `codpar`, `nombre`, `color`) y `amb[]` (ámbitos). De
+ahí se obtiene el código de ámbito de cada municipio para construir la URL (2).
+
+### Estructura del JSON de resultados (campos, 8+)
+
+```
+{ elec, amb, dept, numact, numdep,
+  camaras: [                         # una entrada por corporación
+     { cam,                          # "1"=Cámara, "4"/"5"=circunscripciones
+       mapagan: [ { amb, codpar, vot, pvot, votant, pvotant, votcan } ],
+       partotabla: [ { ... } ],      # tabla de partidos con sus votos
+       totales: { ... } } ],
+  totales: { act: { metota, mesesc, centota } } }   # 424 mesas / 141.698 votantes (Tunja)
+```
+
+Campos usados: `amb`, `dept`, `elec`, `camaras[]`, `cam`, `codpar`, `vot`
+(votos partido), `votcan` (voto candidato), `votant`, `mapagan[]`, `partotabla[]`.
 
 **Cabeceras HTTP:** `User-Agent`, `Accept: application/json`, `Referer` al host
 (ver `HEADERS` en `scraper.py`).
 
-**Intento contra la API / fallback:** el scraper hace *retry con backoff
-exponencial* sobre los patrones de URL. Si la API no responde (fuera de la
-ventana de publicación o cambio de esquema), usa automáticamente los archivos
-de `sample_data/` con la misma forma, y lo registra en `carga_log` con
-`fuente='sample_data'`. El parser de campos está aislado en
-`db/etl.py → normalize_source()` y es tolerante a variantes de nombres de campo,
-para adaptarse al esquema real con un cambio mínimo.
+### Nota sobre códigos de partido y datos de desarrollo
+
+El enunciado fija códigos de partido (`Alianza Verde 5/57`, `Pacto 87/92`,
+`Centro Democrático 10`, `Conservador 2`) que **no coinciden** con los del
+nomenclator real de 2026 (donde Alianza Verde = `4`, Pacto Histórico = `32` más
+decenas de listas regionales, Centro Democrático = `11`). El enunciado tampoco
+adjuntó archivos `sample_data`. Por eso, y siguiendo la instrucción del Reto 1
+(*"Si la API no responde, use los archivos en `sample_data/` para desarrollar su
+parser. Documente el intento en el README"*), el pipeline se desarrolló y validó
+con datos de muestra en `sample_data/` que respetan la forma jerárquica de la
+Registraduría y **los códigos definidos en el enunciado**, de modo que los Retos
+3 (homologación `5→57`) y 4 (colores por `codpar`) queden consistentes con lo
+pedido. El parser de campos está aislado en `db/etl.py → normalize_source()` y es
+tolerante a variantes de nombres, para reapuntar a la API real (nodo
+`camaras[].partotabla[]`) con un cambio mínimo. El intento contra la API en vivo
+se registra en `carga_log` con `fuente`.
 
 ## Municipios en la BD
 

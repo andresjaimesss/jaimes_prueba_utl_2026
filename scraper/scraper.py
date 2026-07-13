@@ -38,16 +38,23 @@ HEADERS = {
     "Accept": "application/json, text/plain, */*",
     "Referer": API_BASE + "/",
 }
-# Patrones probables; se intentan en orden. Ajustar segun F12 -> Network.
+# Patron REAL verificado con F12 -> Network (ver README §API):
+#   nomenclator:  {base}/json/nomenclator.json
+#   resultados:   {base}/json/{ambito}.json     (ambito = codigo interno)
+# El JSON real trae los votos en camaras[].partotabla[]/mapagan[], una forma
+# distinta a la del enunciado. Mientras normalize_source() se adapte a esa
+# forma, el pipeline se alimenta de sample_data (ver README). Al detectar el
+# esquema real, run() lo registra y cae a sample_data de forma limpia.
 URL_TEMPLATES = [
-    "{base}/api/v1/resultados/{corp}/municipio/{codmun}",
-    "{base}/data/{corp}/{codmun}.json",
-    "{base}/assets/data/{corp}/{codmun}.json",
+    "{base}/json/{ambito}.json",
 ]
 
 MUNICIPIOS = {  # nombre -> codmun DIVIPOL (Boyaca = 15)
     "TUNJA": "15001", "PAIPA": "15516", "SOGAMOSO": "15759", "DUITAMA": "15238",
 }
+# codmun DIVIPOL -> ambito interno de la Registraduria (resolver en nomenclator).
+# Tunja verificado en vivo (/json/0700001.json); los demas a confirmar.
+AMBITO = {"15001": "0700001", "15516": None, "15759": None, "15238": None}
 COD2NOM = {v: k for k, v in MUNICIPIOS.items()}
 RAW_DIR = os.path.join(ROOT, "db", "raw")
 SAMPLE_DIR = os.path.join(ROOT, "sample_data")
@@ -69,25 +76,35 @@ def resolve_municipios(args_list):
 
 
 def fetch_api(codmun, corp, retries=3, backoff=1.5, timeout=15):
-    """Descarga con retry/backoff exponencial. Devuelve dict o None."""
+    """Descarga con retry/backoff exponencial. Devuelve dict o None.
+    Requiere el 'ambito' interno del municipio (resuelto via nomenclator)."""
     if requests is None:
+        return None
+    ambito = AMBITO.get(codmun)
+    if not ambito:
+        print(f"      ambito de {codmun} no resuelto en nomenclator -> sample_data")
         return None
     last = None
     for tmpl in URL_TEMPLATES:
-        url = tmpl.format(base=API_BASE, corp=CORP_CODE[corp], codmun=codmun)
+        url = tmpl.format(base=API_BASE, ambito=ambito)
         for intento in range(1, retries + 1):
             try:
                 r = requests.get(url, headers=HEADERS, timeout=timeout)
-                if r.status_code == 200 and r.headers.get("content-type", "").find("json") >= 0:
+                if r.status_code == 200 and "json" in r.headers.get("content-type", ""):
                     return r.json()
                 last = f"HTTP {r.status_code}"
                 if r.status_code in (404, 400):
-                    break  # patron incorrecto, probar siguiente template
+                    break
             except Exception as e:  # noqa: BLE001
                 last = str(e)[:80]
             time.sleep(backoff ** intento)
     print(f"      API sin respuesta ({last}) -> fallback sample_data")
     return None
+
+
+def es_esquema_real(raw):
+    """True si el JSON viene con la forma real de la Registraduria (camaras[])."""
+    return isinstance(raw, dict) and "camaras" in raw
 
 
 def load_sample(codmun, corp):
@@ -105,7 +122,10 @@ def preflight(municipios):
     tot = 0
     for nombre, codmun in municipios:
         for corp in ("CA", "SE"):
-            raw = fetch_api(codmun, corp) or load_sample(codmun, corp)
+            raw = fetch_api(codmun, corp)
+            if raw is not None and es_esquema_real(raw):
+                raw = None  # esquema real -> usar sample para el conteo
+            raw = raw or load_sample(codmun, corp)
             fuente = "API/sample"
             if raw is None:
                 print(f"  {nombre:<10} {corp:<4} {'--':>8} {'--':>7} NO DISPONIBLE")
@@ -131,6 +151,12 @@ def run(municipios, force_source=None):
             else:
                 raw = fetch_api(codmun, corp)
                 fuente = "API"
+                # La API real entrega la forma camaras[]/partotabla[], distinta
+                # a la del enunciado. Hasta adaptar normalize_source() a esa
+                # forma, se usa sample_data (documentado en README §API).
+                if raw is not None and es_esquema_real(raw):
+                    print(f"      esquema real (camaras[]) detectado -> sample_data")
+                    raw = None
                 if raw is None:
                     raw, fuente = load_sample(codmun, corp), "sample_data"
             if raw is None:
