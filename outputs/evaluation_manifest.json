@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "nombre": "JAIMES JAIMES JOHAN ANDRES",
+    "email": "andresjaimes785@gmail.com",
+    "repo": "https://github.com/andresjaimesss/jaimes_prueba_utl_2026"
+  },
+  "generado": "2026-07-12T15:56:35",
+  "municipios": {
+    "esperados": 4,
+    "encontrados": 4,
+    "lista": [
+      "DUITAMA",
+      "PAIPA",
+      "SOGAMOSO",
+      "TUNJA"
+    ],
+    "faltan": [],
+    "ok": true
+  },
+  "conteos": {
+    "municipios": 4,
+    "partidos": 8,
+    "puestos": 15,
+    "mesas": 132,
+    "candidatos": 40,
+    "votos_partido": 1056,
+    "votos_candidato": 5280,
+    "carga_log": 8
+  },
+  "lider_se_por_municipio": {
+    "DUITAMA": {
+      "partido": "PARTIDO CONSERVADOR",
+      "votos": 7157
+    },
+    "PAIPA": {
+      "partido": "CENTRO DEMOCRATICO",
+      "votos": 7110
+    },
+    "SOGAMOSO": {
+      "partido": "PACTO HISTORICO",
+      "votos": 3151
+    },
+    "TUNJA": {
+      "partido": "PACTO HISTORICO",
+      "votos": 5257
+    }
+  },
+  "retos_sql": {
+    "3_1": {
+      "status": "OK",
+      "filas": 15,
+      "muestra": [
+        {
+          "municipio": "SOGAMOSO",
+          "puesto": "PUESTO 01 - SOGAMOSO",
+          "votos_ca_verde": 646,
+          "votos_se_verde": 1334,
+          "ratio_arrastre": 2.065
+        },
+        {
+          "municipio": "TUNJA",
+          "puesto": "PUESTO 03 - TUNJA",
+          "votos_ca_verde": 1017,
+          "votos_se_verde": 1499,
+          "ratio_arrastre": 1.474
+        },
+        {
+          "municipio": "PAIPA",
+          "puesto": "PUESTO 03 - PAIPA",
+          "votos_ca_verde": 1310,
+          "votos_se_verde": 1674,
+          "ratio_arrastre": 1.278
+        },
+        {
+          "municipio": "DUITAMA",
+          "puesto": "PUESTO 01 - DUITAMA",
+          "votos_ca_verde": 1807,
+          "votos_se_verde": 2155,
+          "ratio_arrastre": 1.193
+        },
+        {
+          "municipio": "TUNJA",
+          "puesto": "PUESTO 02 - TUNJA",
+          "votos_ca_verde": 1911,
+          "votos_se_verde": 2162,
+          "ratio_arrastre": 1.131
+        }
+      ]
+    },
+    "3_2": {
+      "status": "OK",
+      "filas": 28,
+      "muestra": [
+        {
+          "municipio": "SOGAMOSO",
+          "puesto": "PUESTO 01 - SOGAMOSO",
+          "mesa": "002",
+          "corp": "CA",
+          "partido": "PACTO HISTORICO",
+          "candidato": "JORGE VARGAS",
+          "votos_candidato": 28,
+          "votos_partido": 38,
+          "pct_del_partido": 73.7
+        },
+        {
+          "municipio": "DUITAMA",
+          "puesto": "PUESTO 03 - DUITAMA",
+          "mesa": "006",
+          "corp": "SE",
+          "partido": "ALIANZA VERDE",
+          "candidato": "MARIA GOMEZ",
+          "votos_candidato": 53,
+          "votos_partido": 74,
+          "pct_del_partido": 71.6
+        },
+        {
+          "municipio": "SOGAMOSO",
+          "puesto": "PUESTO 02 - SOGAMOSO",
+          "mesa": "004",
+          "corp": "CA",
+          "partido": "CENTRO DEMOCRATICO",
+          "candidato": "LAURA MEJIA",
+          "votos_candidato": 37,
+          "votos_partido": 52,
+          "pct_del_partido": 71.2
+        },
+        {
+          "municipio": "SOGAMOSO",
+          "puesto": "PUESTO 02 - SOGAMOSO",
+          "mesa": "005",
+          "corp": "CA",
+          "partido": "PACTO HISTORICO",
+          "candidato": "JORGE VARGAS",
+          "votos_candidato": 29,
+          "votos_partido": 41,
+          "pct_del_partido": 70.7
+        },
+        {
+          "municipio": "PAIPA",
+          "puesto": "PUESTO 01 - PAIPA",
+          "mesa": "006",
+          "corp": "CA",
+          "partido": "PARTIDO CONSERVADOR",
+          "candidato": "OSCAR LEON",
+          "votos_candidato": 75,
+          "votos_partido": 109,
+          "pct_del_partido": 68.8
+        }
+      ]
+    },
+    "3_3": {
+      "status": "OK",
+      "filas": 5,
+      "muestra": [
+        {
+          "partido": "PARTIDO CONSERVADOR",
+          "candidato": "OSCAR LEON",
+          "atribucion_se": 12510.8
+        },
+        {
+          "partido": "CENTRO DEMOCRATICO",
+          "candidato": "LAURA MEJIA",
+          "atribucion_se": 11827.4
+        },
+        {
+          "partido": "PACTO HISTORICO",
+          "candidato": "JORGE VARGAS",
+          "atribucion_se": 11129.5
+        },
+        {
+          "partido": "ALIANZA VERDE",
+          "candidato": "MARIA GOMEZ",
+          "atribucion_se": 10871.8
+        },
+        {
+          "partido": "PARTIDO CONSERVADOR",
+          "candidato": "NATALIA BRAVO",
+          "atribucion_se": 2360.6
+        }
+      ]
+    }
+  },
+  "viz": {
+    "scatter": {
+      "r": 0.588,
+      "pendiente": 0.597,
+      "n_mesas": 132
+    }
+  },
+  "resumen": {
+    "municipios": "4/4 municipios",
+    "sql": "SQL OK"
+  }
+}

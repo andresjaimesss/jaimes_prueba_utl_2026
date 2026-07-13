@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arrastre Electoral · Boyacá 2026 · UTL Senado</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#F5F4EF; --panel:#FFFFFF; --ink:#14181E; --muted:#5C6570;
+    --line:#E2E0D8; --accent:#B8892B; --grid:#ECEAE3;
+    --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  [data-theme="dark"]{
+    --bg:#101419; --panel:#171C23; --ink:#EDEEF0; --muted:#98A2AE;
+    --line:#252C35; --accent:#D8AE5A; --grid:#20272F;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;line-height:1.45}
+  header{border-bottom:1px solid var(--line);padding:22px 26px;display:flex;
+         align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;flex-direction:column;gap:2px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+           text-transform:uppercase;color:var(--accent)}
+  h1{margin:0;font-size:26px;font-weight:650;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:13px}
+  .controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  select,button{font-family:var(--sans);font-size:13px;padding:8px 12px;
+    border:1px solid var(--line);background:var(--panel);color:var(--ink);
+    border-radius:8px;cursor:pointer}
+  button:hover,select:hover{border-color:var(--accent)}
+  main{padding:24px 26px;display:grid;gap:20px;
+       grid-template-columns:1fr 1fr;max-width:1180px;margin:0 auto}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+        padding:18px 18px 12px;min-width:0}
+  .card.wide{grid-column:1 / -1}
+  .card h2{margin:0 0 2px;font-size:14px;font-weight:640;letter-spacing:.01em}
+  .card p.note{margin:0 0 12px;color:var(--muted);font-size:12px}
+  .chart-wrap{position:relative;height:300px}
+  .lider{display:flex;align-items:center;gap:12px;margin-top:14px;
+         padding-top:14px;border-top:1px solid var(--line)}
+  .swatch{width:14px;height:14px;border-radius:3px;flex:none}
+  .lider .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+              text-transform:uppercase;color:var(--muted)}
+  .lider .val{font-weight:640}
+  footer{color:var(--muted);font-size:12px;text-align:center;padding:18px;
+         border-top:1px solid var(--line)}
+  @media(max-width:860px){main{grid-template-columns:1fr}.chart-wrap{height:260px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="eyebrow">UTL · Senado de la República · Boyacá 2026</span>
+    <h1>Arrastre Electoral</h1>
+    <span class="sub">Cámara y Senado · Tunja · Paipa · Sogamoso · Duitama</span>
+  </div>
+  <div class="controls">
+    <label class="lbl" for="mun" style="font-size:12px;color:var(--muted)">Municipio</label>
+    <select id="mun"></select>
+    <button id="csv">Exportar CSV</button>
+    <button id="theme">Modo oscuro</button>
+  </div>
+</header>
+
+<main>
+  <section class="card wide">
+    <h2>Comparativo · votos Cámara por municipio</h2>
+    <p class="note">Total de votos de agrupaciones (lista) a Cámara.</p>
+    <div class="chart-wrap"><canvas id="cmp"></canvas></div>
+  </section>
+
+  <section class="card">
+    <h2>Por municipio · Top 10 candidatos Cámara</h2>
+    <p class="note">Voto preferente consolidado. Color = partido.</p>
+    <div class="chart-wrap"><canvas id="top"></canvas></div>
+    <div class="lider">
+      <span class="swatch" id="lidsw"></span>
+      <div><div class="lbl">Partido líder Senado</div>
+           <div class="val" id="lidtx">—</div></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Arrastre Verde · ratio SE/CA por puesto</h2>
+    <p class="note">Línea de referencia en 1.0: por encima, el Verde traccionó más en Senado.</p>
+    <div class="chart-wrap"><canvas id="arr"></canvas></div>
+  </section>
+</main>
+
+<footer id="foot"></footer>
+
+<script>
+const DATA = {"generado": "2026-07-12 15:18", "municipios": ["DUITAMA", "PAIPA", "SOGAMOSO", "TUNJA"], "colores": {"ALIANZA VERDE": "#007C34", "PACTO HISTORICO": "#7B2D8B", "CENTRO DEMOCRATICO": "#1E477D", "PARTIDO CONSERVADOR": "#E07B00"}, "comparativo_ca": [{"municipio": "DUITAMA", "votos": 27570}, {"municipio": "PAIPA", "votos": 25975}, {"municipio": "TUNJA", "votos": 15781}, {"municipio": "SOGAMOSO", "votos": 12188}], "por_municipio": {"DUITAMA": {"top10_ca": [{"candidato": "JORGE VARGAS", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 3293}, {"candidato": "OSCAR LEON", "partido": "PARTIDO CONSERVADOR", "color": "#E07B00", "votos": 3175}, {"candidato": "LAURA MEJIA", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 3005}, {"candidato": "MARIA GOMEZ", "partido": "ALIANZA VERDE", "color": "#007C34", "votos": 2991}, {"candidato": "IVAN SUAREZ", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 673}, {"candidato": "ELENA PARRA", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 649}, {"candidato": "FELIPE ROJAS", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 633}, {"candidato": "JULIAN OTERO", "partido": "PARTIDO CONSERVADOR", "color": "#E07B00", "votos": 625}, {"candidato": "NATALIA BRAVO", "partido": "PARTIDO CONSERVADOR", "color": "#E07B00", "votos": 615}, {"candidato": "HUGO SILVA", "partido": "PARTIDO CONSERVADOR", "color": "#E07B00", "votos": 586}], "lider_se": {"partido": "PARTIDO CONSERVADOR", "color": "#E07B00", "votos": 7157}}, "PAIPA": {"top10_ca": [{"candidato": "MARIA GOMEZ", "partido": "ALIANZA VERDE", "color": "#007C34", "votos": 3198}, {"candidato": "JORGE VARGAS", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 3163}, {"candidato": "LAURA MEJIA", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 2989}, {"candidato": "OSCAR LEON", "partido": "PARTIDO CONSERVADOR", "color": "#E07B00", "votos": 2323}, {"candidato": "ELENA PARRA", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 619}, {"candidato": "LUIS MENDEZ", "partido": "ALIANZA VERDE", "color": "#007C34", "votos": 607}, {"candidato": "CLARA DUARTE", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 596}, {"candidato": "DIANA PEREZ", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 586}, {"candidato": "MARIO ACOSTA", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 575}, {"candidato": "FELIPE ROJAS", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 569}], "lider_se": {"partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 7110}}, "SOGAMOSO": {"top10_ca": [{"candidato": "LAURA MEJIA", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 1704}, {"candidato": "JORGE VARGAS", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 1399}, {"candidato": "MARIA GOMEZ", "partido": "ALIANZA VERDE", "color": "#007C34", "votos": 1255}, {"candidato": "OSCAR LEON", "partido": "PARTIDO CONSERVADOR", "color": "#E07B00", "votos": 1043}, {"candidato": "FELIPE ROJAS", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 372}, {"candidato": "CLARA DUARTE", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 294}, {"candidato": "ANA TORRES", "partido": "ALIANZA VERDE", "color": "#007C34", "votos": 293}, {"candidato": "MARIO ACOSTA", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 293}, {"candidato": "PAULA RIOS", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 287}, {"candidato": "ANDRES NINO", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 281}], "lider_se": {"partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 3151}}, "TUNJA": {"top10_ca": [{"candidato": "JORGE VARGAS", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 1885}, {"candidato": "LAURA MEJIA", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 1857}, {"candidato": "MARIA GOMEZ", "partido": "ALIANZA VERDE", "color": "#007C34", "votos": 1847}, {"candidato": "OSCAR LEON", "partido": "PARTIDO CONSERVADOR", "color": "#E07B00", "votos": 1441}, {"candidato": "PAULA RIOS", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 376}, {"candidato": "IVAN SUAREZ", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 363}, {"candidato": "ANA TORRES", "partido": "ALIANZA VERDE", "color": "#007C34", "votos": 362}, {"candidato": "ANDRES NINO", "partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 356}, {"candidato": "FELIPE ROJAS", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 348}, {"candidato": "MARIO ACOSTA", "partido": "CENTRO DEMOCRATICO", "color": "#1E477D", "votos": 347}], "lider_se": {"partido": "PACTO HISTORICO", "color": "#7B2D8B", "votos": 5257}}}, "arrastre": {"DUITAMA": [{"puesto": "PUESTO 01 - DUITAMA", "ca": 1807, "se": 2155, "ratio": 1.193}, {"puesto": "PUESTO 02 - DUITAMA", "ca": 1346, "se": 1178, "ratio": 0.875}, {"puesto": "PUESTO 03 - DUITAMA", "ca": 1101, "se": 975, "ratio": 0.886}, {"puesto": "PUESTO 04 - DUITAMA", "ca": 564, "se": 586, "ratio": 1.039}, {"puesto": "PUESTO 05 - DUITAMA", "ca": 1754, "se": 789, "ratio": 0.45}], "PAIPA": [{"puesto": "PUESTO 01 - PAIPA", "ca": 2276, "se": 1260, "ratio": 0.554}, {"puesto": "PUESTO 02 - PAIPA", "ca": 1199, "se": 768, "ratio": 0.641}, {"puesto": "PUESTO 03 - PAIPA", "ca": 1310, "se": 1674, "ratio": 1.278}, {"puesto": "PUESTO 04 - PAIPA", "ca": 2265, "se": 2223, "ratio": 0.981}], "SOGAMOSO": [{"puesto": "PUESTO 01 - SOGAMOSO", "ca": 646, "se": 1334, "ratio": 2.065}, {"puesto": "PUESTO 02 - SOGAMOSO", "ca": 867, "se": 503, "ratio": 0.58}, {"puesto": "PUESTO 03 - SOGAMOSO", "ca": 1332, "se": 928, "ratio": 0.697}], "TUNJA": [{"puesto": "PUESTO 01 - TUNJA", "ca": 1221, "se": 698, "ratio": 0.572}, {"puesto": "PUESTO 02 - TUNJA", "ca": 1911, "se": 2162, "ratio": 1.131}, {"puesto": "PUESTO 03 - TUNJA", "ca": 1017, "se": 1499, "ratio": 1.474}]}};
+const $ = s => document.querySelector(s);
+const fmt = n => (n==null?'—':Number(n).toLocaleString('es-CO'));
+let cCmp, cTop, cArr;
+
+function gridColor(){return getComputedStyle(document.body).getPropertyValue('--grid');}
+function inkColor(){return getComputedStyle(document.body).getPropertyValue('--ink');}
+function baseOpts(){
+  const g=gridColor(), ink=inkColor();
+  return {responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{x:{grid:{color:g},ticks:{color:ink}},
+            y:{grid:{color:g},ticks:{color:ink}}}};
+}
+
+function drawComparativo(){
+  const rows=DATA.comparativo_ca;
+  const opts=baseOpts();
+  cCmp && cCmp.destroy();
+  cCmp=new Chart($('#cmp'),{type:'bar',
+    data:{labels:rows.map(r=>r.municipio),
+      datasets:[{data:rows.map(r=>r.votos),
+        backgroundColor:'#5C6570',borderRadius:5}]},
+    options:opts});
+}
+
+function drawMunicipio(mun){
+  const info=DATA.por_municipio[mun];
+  const rows=info.top10_ca;
+  const opts=baseOpts(); opts.indexAxis='y';
+  cTop && cTop.destroy();
+  cTop=new Chart($('#top'),{type:'bar',
+    data:{labels:rows.map(r=>r.candidato),
+      datasets:[{data:rows.map(r=>r.votos),
+        backgroundColor:rows.map(r=>r.color||'#8A8D91'),borderRadius:4}]},
+    options:opts});
+  const l=info.lider_se;
+  $('#lidsw').style.background=l?l.color:'transparent';
+  $('#lidtx').textContent=l?`${l.partido} · ${fmt(l.votos)} votos`:'—';
+}
+
+function drawArrastre(mun){
+  const rows=DATA.arrastre[mun]||[];
+  const opts=baseOpts();
+  opts.plugins.annotation=undefined;
+  cArr && cArr.destroy();
+  cArr=new Chart($('#arr'),{type:'line',
+    data:{labels:rows.map(r=>r.puesto.replace(/PUESTO |-.*/g,'').trim()||r.puesto),
+      datasets:[
+        {label:'ratio SE/CA',data:rows.map(r=>r.ratio),
+         borderColor:'#007C34',backgroundColor:'#007C34',
+         tension:.25,pointRadius:4,fill:false},
+        {label:'referencia 1.0',data:rows.map(()=>1),
+         borderColor:'#B8892B',borderDash:[6,4],pointRadius:0,fill:false}
+      ]},
+    options:Object.assign(opts,{plugins:{legend:{display:true,
+      labels:{color:inkColor()}}}})});
+}
+
+function redraw(){const mun=$('#mun').value;
+  drawComparativo();drawMunicipio(mun);drawArrastre(mun);}
+
+// Selector
+DATA.municipios.forEach(m=>{const o=document.createElement('option');
+  o.value=m;o.textContent=m;$('#mun').appendChild(o);});
+$('#mun').addEventListener('change',()=>{const mun=$('#mun').value;
+  drawMunicipio(mun);drawArrastre(mun);});
+
+// Dark mode (bonus) - CSS custom properties
+$('#theme').addEventListener('click',()=>{
+  const dark=document.body.getAttribute('data-theme')==='dark';
+  document.body.setAttribute('data-theme',dark?'':'dark');
+  $('#theme').textContent=dark?'Modo oscuro':'Modo claro';
+  redraw();
+});
+
+// Exportar CSV (bonus): top 10 CA del municipio activo
+$('#csv').addEventListener('click',()=>{
+  const mun=$('#mun').value, rows=DATA.por_municipio[mun].top10_ca;
+  let csv='municipio,candidato,partido,votos_ca\n';
+  rows.forEach(r=>{csv+=`${mun},"${r.candidato}","${r.partido}",${r.votos}\n`;});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download=`top10_ca_${mun}.csv`;a.click();
+});
+
+$('#foot').textContent=`Datos generados ${DATA.generado} · Pipeline UTL Senado 2026 · Fuente: Registraduría Nacional`;
+redraw();
+</script>
+</body>
+</html>

@@ -1,0 +1,2690 @@
+{
+ "eleccion": "CA",
+ "coddep": "15",
+ "departamento": "BOYACA",
+ "codmun": "15759",
+ "municipio": "SOGAMOSO",
+ "puestos": [
+  {
+   "codpue": "01",
+   "puesto": "PUESTO 01 - SOGAMOSO",
+   "zona": "01",
+   "mesas": [
+    {
+     "nummesa": "001",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 97,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 36
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 3
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 15
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 0
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 15
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 95,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 36
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 18
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 8
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 8
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 10
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 199,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 91
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 24
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 1
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 31
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 5
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 119,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 60
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 2
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 15
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 2
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 16
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "002",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 52,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 28
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 13
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 0
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 1
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 38,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 28
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 0
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 0
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 5
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 110,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 56
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 5
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 7
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 4
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 9
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 82,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 32
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 12
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 8
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 8
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "003",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 84,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 32
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 0
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 13
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 8
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 12
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 66,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 34
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 10
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 5
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 0
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 5
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 152,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 55
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 22
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 17
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 17
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 4
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 122,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 43
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 10
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 10
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 20
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 3
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "004",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 137,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 60
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 17
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 23
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 0
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 8
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 112,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 62
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 6
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 6
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 14
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 315,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 133
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 35
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 30
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 17
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 17
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 130,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 68
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 8
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 9
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 15
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "005",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 118,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 52
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 14
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 10
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 8
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 2
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 179,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 69
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 13
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 12
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 17
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 16
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 252,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 138
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 40
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 11
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 12
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 14
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 219,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 82
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 25
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 19
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 17
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 13
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "006",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 54,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 26
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 0
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 2
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 8
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 3
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 60,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 25
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 4
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 7
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 7
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 0
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 117,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 48
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 20
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 16
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 10
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 7
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 71,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 34
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 3
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 6
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 9
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "007",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 104,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 54
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 6
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 12
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 5
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 10
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 130,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 70
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 8
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 21
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 4
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 8
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 323,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 122
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 19
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 27
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 36
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 28
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 168,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 89
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 13
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 28
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 3
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 13
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "codpue": "02",
+   "puesto": "PUESTO 02 - SOGAMOSO",
+   "zona": "01",
+   "mesas": [
+    {
+     "nummesa": "001",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 110,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 42
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 16
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 11
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 13
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 3
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 72,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 33
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 7
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 11
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 6
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 5
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 75,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 34
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 0
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 23
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 3
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 3
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 31,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 11
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 2
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 5
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "002",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 234,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 91
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 23
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 23
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 20
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 11
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 142,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 62
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 14
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 6
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 12
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 18
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 220,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 79
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 22
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 22
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 22
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 12
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 145,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 61
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 13
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 16
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 17
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 15
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "003",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 153,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 69
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 8
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 25
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 7
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 22
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 131,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 48
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 19
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 11
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 9
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 5
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 167,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 63
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 17
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 16
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 8
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 18
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 65,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 36
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 9
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 1
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 3
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "004",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 71,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 37
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 4
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 17
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 4
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 77,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 26
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 16
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 3
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 8
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 4
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 52,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 37
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 2
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 2
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 0
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 2
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 35,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 18
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 0
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 6
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "005",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 88,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 39
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 4
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 17
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 5
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 11
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 41,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 29
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 0
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 6
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 0
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 0
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 76,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 33
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 4
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 4
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 0
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 13
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 59,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 21
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 11
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 6
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 5
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "006",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 211,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 80
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 3
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 24
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 24
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 24
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 126,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 58
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 10
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 19
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 8
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 0
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 142,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 81
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 7
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 1
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 17
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 107,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 49
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 12
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 19
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 1
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "codpue": "03",
+   "puesto": "PUESTO 03 - SOGAMOSO",
+   "zona": "02",
+   "mesas": [
+    {
+     "nummesa": "001",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 227,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 101
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 16
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 25
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 12
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 24
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 312,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 124
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 21
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 35
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 25
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 20
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 307,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 125
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 22
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 25
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 27
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 20
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 145,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 80
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 1
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 7
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 10
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 20
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "002",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 129,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 68
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 10
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 4
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 12
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 12
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 173,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 90
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 14
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 19
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 2
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 9
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 166,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 80
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 24
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 4
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 9
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 4
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 91,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 45
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 14
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 0
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "003",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 242,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 121
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 15
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 15
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 4
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 27
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 345,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 146
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 32
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 30
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 25
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 21
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 302,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 133
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 28
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 35
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 30
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 32
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 210,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 93
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 21
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 13
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 24
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 27
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "004",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 163,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 62
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 14
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 15
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 11
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 18
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 167,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 70
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 12
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 6
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 20
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 8
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 127,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 70
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 13
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 0
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 15
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 12
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 93,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 38
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 3
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 11
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 5
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "005",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 185,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 86
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 13
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 9
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 7
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 17
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 295,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 125
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 25
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 34
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 15
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 30
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 287,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 118
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 19
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 23
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 26
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 24
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 113,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 61
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 12
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 6
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 2
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "006",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 166,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 79
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 3
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 21
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 1
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 22
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 318,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 124
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 31
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 12
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 35
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 20
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 186,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 98
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 5
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 7
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 1
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 24
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 143,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 60
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 20
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 5
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 12
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 19
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nummesa": "007",
+     "partidos": [
+      {
+       "codpar": "5",
+       "partido": "ALIANZA VERDE",
+       "votos_partido": 220,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "MARIA GOMEZ",
+         "votos": 92
+        },
+        {
+         "codcan": "2",
+         "candidato": "CARLOS RUIZ",
+         "votos": 16
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANA TORRES",
+         "votos": 29
+        },
+        {
+         "codcan": "4",
+         "candidato": "LUIS MENDEZ",
+         "votos": 21
+        },
+        {
+         "codcan": "5",
+         "candidato": "SOFIA CASTRO",
+         "votos": 21
+        }
+       ]
+      },
+      {
+       "codpar": "87",
+       "partido": "PACTO HISTORICO",
+       "votos_partido": 353,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "JORGE VARGAS",
+         "votos": 140
+        },
+        {
+         "codcan": "2",
+         "candidato": "PAULA RIOS",
+         "votos": 27
+        },
+        {
+         "codcan": "3",
+         "candidato": "ANDRES NIÑO",
+         "votos": 36
+        },
+        {
+         "codcan": "4",
+         "candidato": "DIANA PEREZ",
+         "votos": 24
+        },
+        {
+         "codcan": "5",
+         "candidato": "IVAN SUAREZ",
+         "votos": 23
+        }
+       ]
+      },
+      {
+       "codpar": "10",
+       "partido": "CENTRO DEMOCRATICO",
+       "votos_partido": 274,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "LAURA MEJIA",
+         "votos": 110
+        },
+        {
+         "codcan": "2",
+         "candidato": "FELIPE ROJAS",
+         "votos": 44
+        },
+        {
+         "codcan": "3",
+         "candidato": "CLARA DUARTE",
+         "votos": 24
+        },
+        {
+         "codcan": "4",
+         "candidato": "MARIO ACOSTA",
+         "votos": 24
+        },
+        {
+         "codcan": "5",
+         "candidato": "ELENA PARRA",
+         "votos": 11
+        }
+       ]
+      },
+      {
+       "codpar": "2",
+       "partido": "PARTIDO CONSERVADOR",
+       "votos_partido": 114,
+       "candidatos": [
+        {
+         "codcan": "1",
+         "candidato": "OSCAR LEON",
+         "votos": 62
+        },
+        {
+         "codcan": "2",
+         "candidato": "NATALIA BRAVO",
+         "votos": 8
+        },
+        {
+         "codcan": "3",
+         "candidato": "HUGO SILVA",
+         "votos": 12
+        },
+        {
+         "codcan": "4",
+         "candidato": "ROSA CAMARGO",
+         "votos": 6
+        },
+        {
+         "codcan": "5",
+         "candidato": "JULIAN OTERO",
+         "votos": 11
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
